@@ -1,0 +1,1 @@
+This repository contains all Java source files for assignments in CS 49J Fall 2024, taught by Professor Yan Chen in SJSU.
