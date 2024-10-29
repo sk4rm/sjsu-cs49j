@@ -1,3 +1,4 @@
+import static assignment2.MyFile.writePrimes;
 import static assignment2.MyRecursion.indexOf;
 
 public class Main {
@@ -28,6 +29,6 @@ public class Main {
             );
         }
 
-
+        writePrimes("file1.txt", "file2.txt");
     }
 }
