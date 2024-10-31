@@ -2,6 +2,7 @@ package assignment2;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Stack;
 
 public class MyCollections {
     /**
@@ -16,5 +17,36 @@ public class MyCollections {
             if (i % n == 0) it.remove();
             i++;
         }
+    }
+
+    public static boolean isBalanced(String s) {
+        Stack<Character> stack = new Stack<Character>();
+
+        for (Character c : s.toCharArray()) {
+            switch (c) {
+                // Opening
+                case '(', '[', '{':
+                    stack.push(c);
+                    break;
+
+                // Closing
+                case ')':
+                    if (stack.isEmpty()) return false;
+                    if (stack.pop() != '(') return false;
+                    break;
+
+                case ']':
+                    if (stack.isEmpty()) return false;
+                    if (stack.pop() != '[') return false;
+                    break;
+
+                case '}':
+                    if (stack.isEmpty()) return false;
+                    if (stack.pop() != '{') return false;
+                    break;
+            }
+        }
+
+        return stack.isEmpty();
     }
 }

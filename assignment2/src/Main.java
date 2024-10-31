@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 import static assignment2.MyCollections.downsize;
+import static assignment2.MyCollections.isBalanced;
 import static assignment2.MyFile.writePrimes;
 import static assignment2.MyRecursion.indexOf;
 
@@ -53,5 +54,11 @@ public class Main {
 
         System.out.println("\nAfter downsize:");
         for (String x : list) System.out.println(x);
+
+        if (!isBalanced("println(list.get(0))")) System.out.println("println(list.get(0)) should be balanced");
+        if (!isBalanced("[](3*5)^2")) System.out.println("[](3*5)^2 should be balanced");
+        if (isBalanced("[(2+3]*5)^2")) System.out.println("[(2+3]*5)^2 should be imbalanced");
+        if (isBalanced("println(list.get(0)")) System.out.println("println(list.get(0) should be imbalanced");
+        if (isBalanced("[(3*5)]^2]")) System.out.println("[(3*5)]^2] should be imbalanced");
     }
 }
