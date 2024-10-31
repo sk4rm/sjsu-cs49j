@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import static assignment2.MyCollections.downsize;
@@ -13,26 +12,20 @@ public class Main {
 
         index = indexOf("Mississippi", "sip");
         if (index != 6) {
-            System.out.println(
-                    "Since sip starts after the 6th letter of Mississippi, " +
-                    "after executing the code, index should be 6. Got " + index
-            );
+            System.out.println("Since sip starts after the 6th letter of Mississippi, " +
+                    "after executing the code, index should be 6. Got " + index);
         }
 
         index = indexOf("panda", "pan");
         if (index != 0) {
-            System.out.println(
-                    "Since panda starts with pan, after executing the code, index should be 0. "
-                    + "Got " + index
-            );
+            System.out.println("Since panda starts with pan, after executing the code, index should be 0. " +
+                    "Got " + index);
         }
 
         index = indexOf("Hello world", "wow");
         if (index != -1) {
-            System.out.println(
-                    "Since wow is not a substring of Hello world, after executing the code, index should be -1. "
-                    + "Got " + index
-            );
+            System.out.println("Since wow is not a substring of Hello world, after executing the code, " +
+                    "index should be -1. Got" + index);
         }
 
         // MyFile driver
