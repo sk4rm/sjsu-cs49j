@@ -2,6 +2,7 @@ package assignment2;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class MyCollections {
@@ -9,7 +10,7 @@ public class MyCollections {
      * Removes every n element in the collection
      * @param collection The collection of strings to downsize
      */
-    public static void downsize(Collection<String> collection, int n) {
+    public static void downsize(LinkedList<String> collection, int n) {
         int i = 1;
         Iterator<String> it = collection.iterator();
         while (it.hasNext()) {

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import static assignment2.MyCollections.downsize;
 import static assignment2.MyCollections.isBalanced;
@@ -38,7 +39,7 @@ public class Main {
         writePrimes("file1.txt", "file2.txt");
 
         // MyCollections driver
-        ArrayList<String> list = new ArrayList<>();
+        LinkedList<String> list = new LinkedList<>();
         list.add("Tom");
         list.add("Bob");
         list.add("Cathy");
