@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+
+import static assignment2.MyCollections.downsize;
 import static assignment2.MyFile.writePrimes;
 import static assignment2.MyRecursion.indexOf;
 
 public class Main {
     public static void main(String[] args) {
+        // MyRecursion driver
         int index;
 
         index = indexOf("Mississippi", "sip");
@@ -29,6 +33,25 @@ public class Main {
             );
         }
 
+        // MyFile driver
         writePrimes("file1.txt", "file2.txt");
+
+        // MyCollections driver
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Tom");
+        list.add("Bob");
+        list.add("Cathy");
+        list.add("Alice");
+        list.add("Trudy");
+        list.add("Harry");
+        list.add("Denny");
+
+        System.out.println("Before downsize:");
+        for (String x : list) System.out.println(x);
+
+        downsize(list, 3);
+
+        System.out.println("\nAfter downsize:");
+        for (String x : list) System.out.println(x);
     }
 }
