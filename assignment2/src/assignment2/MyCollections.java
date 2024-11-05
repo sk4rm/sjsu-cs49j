@@ -26,19 +26,13 @@ public class MyCollections {
         for (Character c : s.toCharArray()) {
             switch (c) {
                 // Opening
-                case '(', '[', '{' -> stack.push(c);
+                case '(' -> stack.push(')');
+                case '[' -> stack.push(']');
+                case '{' -> stack.push('}');
 
                 // Closing
-                case ')' -> {
-                    if (stack.isEmpty() || stack.pop() != '(') return false;
-                }
-
-                case ']' -> {
-                    if (stack.isEmpty() || stack.pop() != '[') return false;
-                }
-
-                case '}' -> {
-                    if (stack.isEmpty() || stack.pop() != '{') return false;
+                case ')', ']', '}' -> {
+                    if (stack.isEmpty() || stack.pop() != c) return false;
                 }
             }
         }
